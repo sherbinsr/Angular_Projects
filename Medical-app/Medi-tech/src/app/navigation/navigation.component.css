@@ -1,0 +1,16 @@
+.input-group{
+
+margin-left:400px;
+}
+.btn{
+
+    margin-left:415px;
+}
+.login{
+   color:white;
+   cursor:pointer;
+
+}
+.login:hover{
+   color:grey;
+}

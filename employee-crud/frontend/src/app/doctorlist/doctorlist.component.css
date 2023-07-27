@@ -1,0 +1,34 @@
+.btn{
+
+    color: white;
+    border: white;
+  }
+  .nav-item{
+  
+    padding-left: 40px;
+  } 
+.card{
+
+    margin-left:40px;
+    margin-top: 20px;
+    
+    }
+    .card:hover{
+      transform:scale(1.04);
+      z-index:2;
+    }
+    .card-img-top{
+    
+    width:245px;
+    height:250px;
+    }
+    .fixed-btn{
+    
+     position :fixed;
+     margin-left:70rem;
+    }
+    .fixed-btn:hover{
+        transform:scale(1.05);
+      z-index:2;
+      overflow:hidden;
+    }
