@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, Output, EventEmitter, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { User } from 'src/user';
 import { UserService } from 'src/user.service';
@@ -15,6 +16,8 @@ export class LoginComponent implements OnInit {
   emailId:string="";
   password:string="";
 
+     loginFrom!:FormGroup
+
   user!:User[];
 
  public uId=1;
@@ -22,10 +25,13 @@ export class LoginComponent implements OnInit {
  @Output() timeEvent = new EventEmitter();
 
 
-  constructor(private http:HttpClient ,private router:Router ,private userservice:UserService){}
+  constructor(private http:HttpClient ,private router:Router,private formBuilder:FormBuilder ,private userservice:UserService){}
   
   ngOnInit(): void {
-   
+    this.loginFrom= this.formBuilder.group({
+      emailId:['',Validators.required],
+      password:['',Validators.required]
+    })
    this.getAllUsers();
   }
     private getAllUsers(){

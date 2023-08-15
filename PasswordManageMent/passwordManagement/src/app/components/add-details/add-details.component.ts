@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserDataServiceService } from 'src/user-data-service.service';
 import { UserData } from 'src/userData';
@@ -11,14 +12,19 @@ import { UserData } from 'src/userData';
 
 })
 export class AddDetailsComponent implements OnInit {
-
+  adddetails!:FormGroup
   
   userData:UserData = new UserData();
   public id=1;
 
-  constructor(private UserDataService:UserDataServiceService,private http:HttpClient,private router:Router){}
+  constructor(private UserDataService:UserDataServiceService,private formBuilder:FormBuilder,private http:HttpClient,private router:Router){}
   ngOnInit(): void {
     this.getUserId();
+    this. adddetails = this.formBuilder.group({
+      fullName:['',Validators.required],
+      emailId:['',Validators.required],
+      password:['',Validators.required]
+    })
   }
   getUserId()
   {

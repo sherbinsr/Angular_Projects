@@ -7,29 +7,32 @@
               <div class="row justify-content-center">
                 <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
                   <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
-                  <form class="mx-1 mx-md-4">
+                  <form class="mx-1 mx-md-4" [formGroup]="registerFrom">
                     <div class="form-group">
                     <div class="d-flex flex-row align-items-center mb-4">
                       <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                       <div class="form-outline flex-fill mb-0">
-                        <input type="text" id="fullName" [(ngModel)]="userName" [ngModelOptions]="{standalone:true}" class="form-control" />
                         <label class="form-label" for="form3Example1c">Full Name</label>
+                        <input type="text" id="fullName" [(ngModel)]="userName" formControlName="fullName"  class="form-control" />
+                       <small *ngIf="registerFrom.controls['fullName'].dirty && registerFrom.hasError('required','fullName')"  class="text-danger">*userName is required</small>
                       </div>
                     </div>
   
                     <div class="d-flex flex-row align-items-center mb-4">
                       <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                       <div class="form-outline flex-fill mb-0">
-                        <input type="email" id="emailid"  [(ngModel)]="emailId" [ngModelOptions]="{standalone:true}" class="form-control" />
-                        <label class="form-label" for="form3Example3c">Your Email</label>
+                          <label class="form-label" for="form3Example3c">Your Email</label>
+                        <input type="email" id="emailid"  [(ngModel)]="emailId" formControlName="emailId" class="form-control" />
+                      <small  *ngIf="registerFrom.controls['emailId'].dirty && registerFrom.hasError('required','emailId')" class="text-danger">*Emailid is required</small>
                       </div>
                     </div>
   
                     <div class="d-flex flex-row align-items-center mb-4">
                       <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                       <div class="form-outline flex-fill mb-0">
-                        <input type="password" id="password"  [(ngModel)]="password" [ngModelOptions]="{standalone:true}" class="form-control" />
                         <label class="form-label" for="form3Example4c">Password</label>
+                        <input type="password" id="password"  [(ngModel)]="password" formControlName="password" class="form-control" />
+                        <small  *ngIf="registerFrom.controls['password'].dirty && registerFrom.hasError('required','password')" class="text-danger">*Password</small>
                       </div>
                     </div>
                     <div class="form-check d-flex justify-content-center mb-5">
@@ -40,7 +43,7 @@
                     </div>
   
                     <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                      <button type="submit" class="btn btn-primary btn-lg" (click)="register()">Register</button>
+                      <button  type="submit" class="btn btn-primary btn-lg" (click)="register()">Register</button>
                     </div>
                 </div>
                   </form>

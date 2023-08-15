@@ -17,6 +17,8 @@ import { RegisterComponent } from './components/homepage/register/register.compo
 
 import {MatDialog, MatDialogModule} from '@angular/material/dialog';
 import { AddDetailsComponent } from './components/add-details/add-details.component';
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatSnackBar } from '@angular/material/snack-bar';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +39,11 @@ import { AddDetailsComponent } from './components/add-details/add-details.compon
      MatMenuModule,
       MatIconModule,
       MatDialogModule,
-      
+      MatFormFieldModule,
+
+      ReactiveFormsModule,
+  
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
