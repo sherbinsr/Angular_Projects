@@ -1,0 +1,34 @@
+.example-card {
+    max-width: 400px;
+    margin: 0 auto; 
+    border-width: 5px;
+    border-radius: 15px;
+      
+}
+h2{
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 23px;
+
+}
+
+.navbar li  :hover{
+
+    color: red;
+}
+.fa-whatsapp{
+    color: green;
+}
+.fa-envelope{
+    color: #4285F4;
+}
+.html {
+    scroll-behavior: smooth;
+}
+.btn :hover{
+    color: antiquewhite;
+}
+.nav-item
+{
+    cursor: pointer;
+}

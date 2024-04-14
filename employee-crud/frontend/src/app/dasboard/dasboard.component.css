@@ -1,0 +1,29 @@
+.btn{
+
+  color: white;
+  border: white;
+}
+.nav-item{
+
+  padding-left: 40px;
+   
+} 
+.btn1{
+  
+  color:white;
+  background-color: #cc0000;
+  width: 20rem;
+  height: 3.5rem;
+ 
+  border-radius: 80px;
+  border-color: white;
+  margin-bottom: 30px;
+   margin-left: 40%;
+}
+.btn1:hover{
+   background-color: #198754;
+}
+.fab:hover{
+
+  background-color: #198754;
+}

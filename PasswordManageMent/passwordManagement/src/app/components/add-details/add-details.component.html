@@ -1,0 +1,31 @@
+<div class="container">
+    <br>
+    <br>
+<form >
+    <!-- 2 column grid layout with text inputs for the first and last names -->
+    <div class="row mb-4">
+      <div class="col">
+        <div class="form-outline">
+          <div class="form-group">
+          <input type="text" id="form3Example1" placeholder="Eg: Google,Facebook" [(ngModel)]="userData.sourceName" [ngModelOptions]="{standalone:true}" class="form-control"  />
+          <label class="form-label" for="form3Example1">SourceName</label>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-outline">
+          <input type="text" id="password" placeholder="jhon@gmail.com" [(ngModel)]="userData.userNames" [ngModelOptions]="{standalone:true}" class="form-control"  />
+          <label class="form-label" for="password">UserName</label>
+        </div>
+      </div>
+    </div>  
+    <!-- Password input -->
+    <div class="form-outline mb-4">
+      <input type="password" id="password" placeholder="Password" [(ngModel)]="userData.passwords" [ngModelOptions]="{standalone:true}" class="form-control"  />
+      <label class="form-label" for="password">Password</label>
+    </div>
+    <div class="text-center">
+    <button  type="submit" class="btn btn-primary btn-block mb-4" [mat-dialog-close]="true" (click)="add(id)">Save</button>
+</div>
+</div>
+  </form>
+</div>

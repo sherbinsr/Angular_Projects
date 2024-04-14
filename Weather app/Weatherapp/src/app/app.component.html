@@ -1,0 +1,161 @@
+<div class="container"  [formGroup]="SearchForm">
+  <br>
+  <div class="d-flex">
+  <input  class="form-control"  formControlName="city" placeholder="Search ">
+  <button class="btn text-muted" (click)="searchWeather()"><i class="fa-solid fa-magnifying-glass fa-lg"></i></button>
+  </div>
+  <br>
+  <div class="top">
+  <div style="background:rgba(62, 45, 143, 1);    height: 15rem;
+    "  class="card mx-auto">
+    <br>
+    <div class="card-img">
+      <img src="../assets/Img1.png" *ngIf="14 > 15" width="100px"  height="100px">
+      <img src="../assets/img2.png" *ngIf="14 <= 15" width="100px"  height="100px">
+   </div>
+   <div class="Weather-data">
+    <div class="location">{{weatherData.city}}</div>
+    <br><br>
+    <div class="temperature">{{weatherData.temp}}°C</div>
+</div>
+</div>
+<div class="bottom">
+  <h5>&nbsp;&nbsp;More Informations</h5>
+  <br>
+  <br>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+          <i class="fa-solid fa-temperature-high fa-2xl" style="color: #4C4DDB;"></i>
+        <div class="text">
+          
+          {{weatherData.temp}}
+       </div>
+      </div>
+      <div class="col">
+      <i class="fa-solid fa-wind fa-2xl"  style="color: #4C4DDB;"></i>
+          <div class="text">
+          {{weatherData.wind}}
+          </div>
+      </div>
+      <div class="col">
+          <i class="fa-solid fa-droplet fa-2xl"  style="color: #4C4DDB;"></i>
+          <div class="text">
+        {{weatherData.humidity}}
+         </div>
+      </div>
+      <div class="col">       
+         <i class="fa-regular fa-eye fa-2xl"  style="color: #4C4DDB;"></i>
+          <div class="text">
+             {{weatherData.visibility}}
+         </div>
+      </div>
+      <div class="col">       
+        <i class="fa-solid fa-feather-pointed fa-2xl"  style="color: #4C4DDB;"></i>
+         <div class="text">
+           {{weatherData.aqi}}
+        </div>
+     </div>
+    </div>
+  </div>
+</div>
+<br>
+<div  class="card shadow p-3 mb-5  mb-5 ">
+  <div class="container text-white">
+    <div class="info">
+    <div class="Weather text-muted">
+     Air Quality
+    </div>
+    <hr>
+    <div class="info">
+      {{weatherData.aqi_remark}}
+
+    </div>
+    <div class="info">
+      {{weatherData.aqi_description}}.
+    </div>
+    <div class="info">
+      <mat-progress-bar mode="determinate" color="Primary-green" value="20"></mat-progress-bar>
+    </div>
+  </div>
+  </div>
+</div>
+<div class="card shadow p-3 mb-5  mb-5 ">
+  <div class="container">
+    <div class="Weather text-muted">
+     LifeStyle Tips
+     </div>
+    <hr class="text-white">
+    <div class="row info">
+      <div class="col">
+        <i class="fa-solid fa-gear fa-2xl"  style="color: #4C4DDB;"></i>
+        <div class="text">
+    Pollen Count
+       </div>
+      </div>
+      <div class="col">
+        <i class="fa-solid fa-umbrella fa-2xl"   style="color: #4C4DDB;"></i>
+        <div class="text">
+          UV Index
+                </div>
+      </div>
+      <div class="col">
+        <i class="fa-solid fa-face-smile fa-2xl"   style="color: #4C4DDB;"></i>
+        <div class="text">
+           Oil Control 
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div class="row info">
+      <div class="col">
+        <i class="fa-solid fa-hand-holding-droplet fa-2xl" style="color: #4C4DDB;"></i>
+        <div class="text">
+          Car Wash
+       </div>
+      </div>
+      <div class="col">
+        <i class="fa-solid fa-basketball fa-2xl"  style="color: #4C4DDB;"></i>
+        <div class="text">
+          Indoor Workouts 
+       </div>
+      </div>
+      <div class="col">
+        <i class="fa-solid fa-car fa-2xl"   style="color: #4C4DDB;"></i>
+        <div class="text">
+          Slippery Roads
+       </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="row info">
+    <div class="col">
+      <i class="fa-solid fa-bed fa-2xl" style="color: #4C4DDB;"></i>
+      <div class="text">
+     Sleep Control
+     </div>
+    </div>
+    <div class="col">
+      <i class="fa-solid fa-leaf fa-2xl" style="color: #4C4DDB;"></i>
+      <div class="text">
+        Sutible For Trip
+     </div>
+    </div>
+    <div class="col">
+      <i class="fa-solid fa-mosquito fa-2xl"  style="color: #4C4DDB;"></i>
+      <div class="text">
+        Some Mosquitoes
+     </div>
+    <br>
+    <br>
+    </div>
+  </div>
+</div>
+<br>
+</div>
+
+</div>
+<router-outlet></router-outlet>

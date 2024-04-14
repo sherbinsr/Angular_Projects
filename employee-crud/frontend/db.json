@@ -1,0 +1,35 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "signupUsers": [
+    {
+      "name": "sherbin",
+      "email": "sherbinsyles31@gmail.com",
+      "password": "s3112004@",
+      "mobile": 9677472562,
+      "id": 1
+    },
+    {
+      "name": "sherlin",
+      "email": "sherlinsyles28@gmail.com",
+      "password": "s28042006@",
+      "mobile": 7397123669,
+      "id": 2
+    },
+    {
+      "name": "",
+      "email": "sherbinsyles31@gmail.com",
+      "password": "s3112004@",
+      "mobile": "",
+      "id": 3
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
